@@ -1,0 +1,42 @@
+{
+  "name": "mtsd-gradebook",
+  "version": "1.0.0",
+  "description": "hunna hunna",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzt/mtsd-gradebook.git"
+  },
+  "keywords": [
+    "genesis",
+    "gradebook",
+    "server",
+    "lol",
+    "flexico",
+    "goth",
+    "money",
+    "records",
+    "gbe",
+    "chief",
+    "keef",
+    "g",
+    "a",
+    "n",
+    "g",
+    "f12"
+  ],
+  "author": "Peter Soboyejo <thepcmrtim@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzt/mtsd-gradebook/issues"
+  },
+  "homepage": "https://github.com/dzt/mtsd-gradebook#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "cheerio": "^0.20.0",
+    "express": "^4.13.4"
+  }
+}
