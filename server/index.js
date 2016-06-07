@@ -15,6 +15,8 @@ app.get('/', function(req, res) {
 
 app.post('/parseHTML', function(req, res) {
 
+    console.log(req.body);
+
     var $ = cheerio.load(req.body, { ignoreWhitespace: false });
 
     var parsedResults = {
