@@ -15,8 +15,6 @@ app.get('/', function(req, res) {
 
 app.post('/parseHTML', function(req, res) {
 
-    console.log(req.body);
-
     var $ = cheerio.load(req.body, { ignoreWhitespace: false });
 
     var parsedResults = {
@@ -25,11 +23,11 @@ app.post('/parseHTML', function(req, res) {
 
     $('tr.listrowodd').each(function(i, element) {
 
-      var course = $('td.cellLeft', this).eq(0).text().trim();
+      var name = $('td.cellLeft', this).eq(0).text().trim();
       var teacher = $('td.cellLeft', this).eq(1).children().remove().end().text().trim().replace(/^\s+|\s+$/gm,'');
       var grade = $('td.cellRight', this).find('td.cellRight').text().trim().replace(/^\s+|\s+$/gm,'');
 
-      if (grade == "") {
+      if (grade === "") {
         grade = "No Grades";
       }
 
@@ -43,11 +41,11 @@ app.post('/parseHTML', function(req, res) {
 
     $('tr.listroweven').each(function(i, element) {
 
-      var course = $('td.cellLeft', this).eq(0).text().trim();
+      var name = $('td.cellLeft', this).eq(0).text().trim();
       var teacher = $('td.cellLeft', this).eq(1).children().remove().end().text().trim().replace(/^\s+|\s+$/gm,'');
       var grade = $('td.cellRight', this).find('td.cellRight').text().trim().replace(/^\s+|\s+$/gm,'');
 
-      if (grade == "") {
+      if (grade === "") {
         grade = "No Grades";
       }
 

@@ -1,9 +1,10 @@
-package com.petersoboyejo.mtsdgradebook;
+package com.petersoboyejo.mtsdgradebook.activities;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.petersoboyejo.mtsdgradebook.R;
 
 public class SplashActivity extends AppCompatActivity {
     // Splash screen timer
@@ -16,9 +17,8 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                Intent i = new Intent(SplashActivity.this, CoursesActivity.class);
                 startActivity(i);
-
                 finish();
             }
         }, SPLASH_TIME_OUT);
